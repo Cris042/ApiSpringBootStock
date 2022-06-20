@@ -8,15 +8,14 @@ public class ProductDto
     @NotBlank
     private String name;
     @NotBlank
-    private String email;
+    private String category;
     @NotBlank
-    private String jobTitle;
+    private String description;
     @NotBlank
-    private String phone;
+    private String count;
     @NotBlank
     private String imageUrl;
-   
-   
+
     public String getName() 
     {
         return name;
@@ -27,34 +26,34 @@ public class ProductDto
         this.name = name;
     }
 
-    public String getEmail() 
+    public String getCategory() 
     {
-        return email;
+        return category;
     }
 
-    public void setEmail(String email) 
+    public void setCategory(String category) 
     {
-        this.email = email;
+        this.category = category;
     }
 
-    public String getJobTitle() 
+    public String getDescription() 
     {
-        return jobTitle;
+        return description;
     }
 
-    public void setJobTitle(String jobTitle) 
+    public void setDescription(String description) 
     {
-        this.jobTitle = jobTitle;
+        this.description = description;
     }
 
-    public String getPhone() 
+    public String getCount() 
     {
-        return phone;
+        return count;
     }
 
-    public void setPhone(String phone) 
+    public void setCount(String count) 
     {
-        this.phone = phone;
+        this.count = count;
     }
 
     public String getImageUrl() 

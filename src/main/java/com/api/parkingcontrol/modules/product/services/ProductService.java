@@ -25,14 +25,9 @@ public class ProductService
         return productRepository.save(productEntities);
     }
 
-    public boolean existsByEmail(String email) {
-        return productRepository.existsByEmail( email);
-    }
-
     public boolean existsByName(String name) {
         return productRepository.existsByName( name );
     }
-
 
     public Page<ProductEntities> findAll(Pageable pageable) {
         return productRepository.findAll(pageable);

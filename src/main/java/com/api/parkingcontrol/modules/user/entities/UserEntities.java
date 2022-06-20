@@ -17,8 +17,6 @@ public class UserEntities implements Serializable {
     private String name;
     @Column(nullable = false, unique = false, length = 20)
     private String username;
-    @Column(nullable = false, unique = true, length = 7)
-    private String licensePlateCar;
     @Column(nullable = false)
     private LocalDateTime registrationDate;
    
@@ -45,14 +43,6 @@ public class UserEntities implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getLicensePlateCar() {
-        return licensePlateCar;
-    }
-
-    public void setLicensePlateCar(String licensePlateCar) {
-        this.licensePlateCar = licensePlateCar;
     }
 
     public LocalDateTime getRegistrationDate() {

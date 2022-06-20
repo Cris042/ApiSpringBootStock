@@ -9,8 +9,6 @@ import com.api.parkingcontrol.modules.user.entities.UserEntities;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserEntities, UUID> {
-
-    boolean existsByLicensePlateCar(String licensePlateCar);
     boolean existsByName(String userName);
 
 }

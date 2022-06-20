@@ -33,10 +33,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> saveuserSpot(@RequestBody @Valid UserDto UserDto){
-        if(userService.existsByLicensePlateCar(UserDto.getLicensePlateCar())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: License Plate Car is already in use!");
-        }
+    public ResponseEntity<Object> saveuserSpot(@RequestBody @Valid UserDto UserDto){     
         if(userService.existsByName(UserDto.getName())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: user Name is already in use!");
         }

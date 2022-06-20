@@ -11,9 +11,6 @@ public class UserDto {
     @NotBlank
     @Size(max = 20)
     private String username;
-    @NotBlank
-    @Size(max = 7)
-    private String licensePlateCar;
 
 
     public String getName() {
@@ -30,14 +27,6 @@ public class UserDto {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getLicensePlateCar() {
-        return licensePlateCar;
-    }
-
-    public void setLicensePlateCar(String licensePlateCar) {
-        this.licensePlateCar = licensePlateCar;
     }
 
     

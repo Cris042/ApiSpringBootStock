@@ -17,16 +17,13 @@ public class ProductEntities implements Serializable
     @Column(nullable = false, unique = true, length = 10)
     private String name;
     @Column(nullable = false, unique = true)
-    private String email;
+    private String category;
     @Column(nullable = false)
-    private String jobTitle;
+    private String description;
     @Column(nullable = false)
-    private String phone;
+    private String count;
     @Column(nullable = false)
     private String imageUrl;
-    @Column()
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID employeeCode;
 
     public UUID getId() 
     {
@@ -48,34 +45,34 @@ public class ProductEntities implements Serializable
         this.name = name;
     }
 
-    public String getEmail() 
+    public String getCategory() 
     {
-        return email;
+        return category;
     }
 
-    public void setEmail(String email) 
+    public void setCategory(String category) 
     {
-        this.email = email;
+        this.category = category;
     }
 
-    public String getJobTitle() 
+    public String getDescription() 
     {
-        return jobTitle;
+        return description;
     }
 
-    public void setJobTitle(String jobTitle) 
+    public void setDescription(String description) 
     {
-        this.jobTitle = jobTitle;
+        this.description = description;
     }
 
-    public String getPhone() 
+    public String getCount() 
     {
-        return phone;
+        return count;
     }
 
-    public void setPhone(String phone) 
+    public void setCount(String count) 
     {
-        this.phone = phone;
+        this.count = count;
     }
 
     public String getImageUrl() 
@@ -86,15 +83,5 @@ public class ProductEntities implements Serializable
     public void setImageUrl(String imageUrl) 
     {
         this.imageUrl = imageUrl;
-    }
-
-    public UUID getEmployeeCode() 
-    {
-        return employeeCode;
-    }
-    
-    public void setEmployeeCode(UUID employeeCode) 
-    {
-        this.employeeCode = employeeCode;
     }
 }

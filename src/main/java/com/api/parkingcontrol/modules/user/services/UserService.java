@@ -25,10 +25,6 @@ public class UserService {
         return userRepository.save(UserModel);
     }
 
-    public boolean existsByLicensePlateCar(String licensePlateCar) {
-        return userRepository.existsByLicensePlateCar(licensePlateCar);
-    }
-
     public boolean existsByName(String name) {
         return userRepository.existsByName( name );
     }

@@ -35,9 +35,6 @@ public class ProductController
 
     @PostMapping("add")
     public ResponseEntity<Object> saveProduct(@RequestBody @Valid ProductDto productDto){
-        if(productService.existsByEmail(productDto.getEmail())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: E-mail is already in use!");
-        }
         if(productService.existsByName(productDto.getName())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Name is already in use!");
         }
@@ -65,8 +62,8 @@ public class ProductController
 
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Object> updateProduct(@PathVariable(value = "id") UUID id,
-                                                    @RequestBody @Valid ProductDto productDto){
+    public ResponseEntity<Object> updateProduct(@PathVariable(value = "id") UUID id, @RequestBody @Valid ProductDto productDto)
+    {
         Optional<ProductEntities> ProductEntitiesOptional = productService.findById(id);
         if (!ProductEntitiesOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found.");

@@ -11,5 +11,4 @@ import com.api.parkingcontrol.modules.product.entities.ProductEntities;
 public interface ProductRepository extends JpaRepository<ProductEntities, UUID> 
 {
     boolean existsByName(String userName);
-    boolean existsByEmail(String userName);
 }
