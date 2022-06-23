@@ -16,7 +16,7 @@ public class ProductEntities implements Serializable
     private UUID id;
     @Column(nullable = false, unique = true, length = 10)
     private String name;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String category;
     @Column(nullable = false)
     private String description;
