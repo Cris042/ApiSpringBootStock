@@ -34,7 +34,7 @@ public class ProductController
 
 
     @PostMapping("add")
-    public ResponseEntity<Object> saveProduct(@RequestBody @Valid ProductDto productDto){
+    public ResponseEntity<Object> saveProduct(@ModelAttribute @Valid ProductDto productDto){
         if(productService.existsByName(productDto.getName())){
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: Name is already in use!");
         }
